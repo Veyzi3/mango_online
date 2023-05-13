@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'user_store.dart';
 
 class StoreWidget extends StatelessWidget {
   final Widget child;
@@ -10,7 +11,9 @@ class StoreWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        Provider<int>(create: (context) => 1),
+        ChangeNotifierProvider(
+          create: (context) => UserStore(),
+        ),
       ],
       child: child,
     );
