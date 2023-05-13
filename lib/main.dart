@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:mango_online/store/store_widget.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    const StoreWidget(
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
